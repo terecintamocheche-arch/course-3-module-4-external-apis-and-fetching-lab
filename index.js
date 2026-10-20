@@ -12,4 +12,14 @@ document.addEventListener("DOMContentLoaded", () => {
 
   fetchButton.addEventListener("click", async () => {
     const state = stateInput.value.trim().toUpperCase();
-    
+
+
+    stateInput.value = "";
+
+    // Validate the input
+    if (!/^[A-Z]{2}$/.test(state)) {
+      errorMessage.textContent =
+        "Please enter a valid two-letter state abbreviation.";
+      errorMessage.classList.remove("hidden");
+      return;
+    }
