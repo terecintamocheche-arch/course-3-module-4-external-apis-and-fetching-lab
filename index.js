@@ -57,3 +57,11 @@ errorMessage.textContent = "";
 
         alertsDisplay.appendChild(list);
       }
+ errorMessage.textContent = "";
+      errorMessage.classList.add("hidden");
+    } catch (error) {
+      errorMessage.textContent = `Error fetching weather alerts: ${error.message}`;
+      errorMessage.classList.remove("hidden");
+    }
+  });
+});
