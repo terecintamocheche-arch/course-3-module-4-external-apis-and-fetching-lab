@@ -2,7 +2,7 @@
 const weatherApi = "https://api.weather.gov/alerts/active?area="
 
 // Your code here!
-const weatherApi = "https://api.weather.gov/alerts/active?area=";
+
 
 document.addEventListener("DOMContentLoaded", () => {
   const stateInput = document.getElementById("state-input");
